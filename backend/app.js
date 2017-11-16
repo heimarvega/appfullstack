@@ -24,7 +24,7 @@ app.use(morgan('combined', {stream: accessLogStream}))
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 app.use(cors());
-//morgan por consola
+//morgan por consola errores
 app.use(morgan('dev', {
     skip: function (req, res) { return res.statusCode < 400 }
   }))
